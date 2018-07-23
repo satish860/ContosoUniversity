@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity.Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity.IntegerationTests", "tests\ContosoUniversity.IntegerationTests\ContosoUniversity.IntegerationTests.csproj", "{E03435F5-C3C7-4680-ACAB-30DEC12E7F31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity.DbMigration", "src\ContosoUniversity.DbMigration\ContosoUniversity.DbMigration.csproj", "{E355A9AD-20B9-4220-9B51-60CE0F3CEEDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E03435F5-C3C7-4680-ACAB-30DEC12E7F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E03435F5-C3C7-4680-ACAB-30DEC12E7F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E03435F5-C3C7-4680-ACAB-30DEC12E7F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E355A9AD-20B9-4220-9B51-60CE0F3CEEDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E355A9AD-20B9-4220-9B51-60CE0F3CEEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E355A9AD-20B9-4220-9B51-60CE0F3CEEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E355A9AD-20B9-4220-9B51-60CE0F3CEEDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
