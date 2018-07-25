@@ -1,9 +1,9 @@
 FROM  microsoft/dotnet-framework:4.7.2-sdk AS build-stage
-
 WORKDIR /app
-
 COPY . .
-
 RUN Nuget restore
+RUN msbuild ContosoUniversity.sln /p:configuration=Release 
 
-RUN msbuild ContosoUniversity.sln /p:configuration=Release
+FROM microsoft/aspnet:4.7.2-windowsservercore-ltsc2016 as Release
+WORKDIR /inetpub/wwwroot
+COPY --from=build-stage /app/src/ContosoUniversity.Web/. ./
