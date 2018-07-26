@@ -16,7 +16,7 @@ namespace ContosoUniversity.Domain
         {
             Scan(scanner =>
             {
-                scanner.AssemblyContainingType<CreateCourseCommand>();
+                scanner.AssemblyContainingType<CreateStudentCommand>();
                  // Our assembly with requests & handlers
                 scanner.ConnectImplementationsToTypesClosing(typeof(IRequestHandler<,>));
                 scanner.ConnectImplementationsToTypesClosing(typeof(INotificationHandler<>));
