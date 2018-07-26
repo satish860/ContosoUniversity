@@ -58,5 +58,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Scripts\Script00001-IntialSchema.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Script00002-SeedDataStudents.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
