@@ -16,16 +16,9 @@ namespace ContosoUniversity.DbMigration
             var connectionString =
         args.FirstOrDefault()
         ?? "Data Source=PRO-LP116;Initial Catalog=ContosoUniversity;Integrated Security=True";
-            EnsureDatabase.For.SqlDatabase(connectionString);
+            DatabaseMigrator databaseMigrator = new DatabaseMigrator();
 
-            var upgrader =
-                DeployChanges.To
-                    .SqlDatabase(connectionString)
-                    .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
-                    .LogToConsole()
-                    .Build();
-
-            var result = upgrader.PerformUpgrade();
+            var result = databaseMigrator.Migrate(connectionString);
 
             if (!result.Successful)
             {
