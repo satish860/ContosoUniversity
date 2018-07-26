@@ -1,4 +1,4 @@
-﻿using ContosoUniversity.Domain.Courses;
+﻿using ContosoUniversity.Domain.Students;
 using MediatR;
 using StructureMap;
 using System;

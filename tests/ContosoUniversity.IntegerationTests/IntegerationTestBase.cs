@@ -16,7 +16,8 @@ namespace ContosoUniversity.IntegerationTests
 
         public Task DisposeAsync()
         {
-            return Task.CompletedTask;
+            return SliceFixture.ResetCheckpoint();
+            
         }
 
         public virtual async  Task InitializeAsync()

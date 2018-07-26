@@ -57,9 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Courses\CreateHandler.cs" />
-    <Compile Include="Courses\StudentEntity.cs" />
-    <Compile Include="Courses\CreateStudentCommand.cs" />
+    <Compile Include="Students\Create.cs" />
+    <Compile Include="Students\Index.cs" />
+    <Compile Include="Students\StudentEntity.cs" />
     <Compile Include="DomainRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

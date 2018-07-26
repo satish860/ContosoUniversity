@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Domain.Courses
+namespace ContosoUniversity.Domain.Students
 {
     [Table("Person")]
     public class StudentEntity

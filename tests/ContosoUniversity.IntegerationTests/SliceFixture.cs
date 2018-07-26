@@ -43,11 +43,20 @@ namespace ContosoUniversity.IntegerationTests
         }
 
         public static T FindAsync<T>(int id)
-            where T:class
+            where T : class
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 return connection.Get<T>(id);
+            }
+        }
+
+        public static void InsertAsync<T>(T entity)
+            where T : class
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Insert<T>(entity);
             }
         }
     }
