@@ -24,5 +24,11 @@ namespace ContosoUniversity.Web.Controllers
             var studentList = await Mediator.Send(new QueryInputModel());
             return View(studentList);
         }
+
+        public async Task<ActionResult> Details(int? id)
+        {
+            var student = await Mediator.Send(new DetailsModel { Id=id.Value});
+            return View(student);
+        }
     }
 }

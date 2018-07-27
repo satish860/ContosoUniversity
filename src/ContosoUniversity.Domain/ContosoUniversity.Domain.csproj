@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Students\Create.cs" />
+    <Compile Include="Students\Details.cs" />
     <Compile Include="Students\Index.cs" />
     <Compile Include="Students\StudentEntity.cs" />
     <Compile Include="DomainRegistry.cs" />
