@@ -30,8 +30,9 @@ namespace ContosoUniversity.Web.App_Start {
 	using ContosoUniversity.Web.DependencyResolution;
 
     using StructureMap;
-    
-	public static class StructuremapMvc {
+    using ContosoUniversity.Domain;
+
+    public static class StructuremapMvc {
         #region Public Properties
 
         public static StructureMapDependencyScope StructureMapDependencyScope { get; set; }
@@ -46,6 +47,10 @@ namespace ContosoUniversity.Web.App_Start {
 		
         public static void Start() {
             IContainer container = IoC.Initialize();
+            container.Configure(cfg =>
+            {
+                cfg.AddRegistry<DomainRegistry>();
+            });
             StructureMapDependencyScope = new StructureMapDependencyScope(container);
             DependencyResolver.SetResolver(StructureMapDependencyScope);
             DynamicModuleUtility.RegisterModule(typeof(StructureMapScopeModule));
